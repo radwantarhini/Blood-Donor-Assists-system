@@ -1,0 +1,112 @@
+{foreach from=$assists item=assist}
+{if $assist.active eq 1}
+<table  class="tborder" cellpadding="6" cellspacing="0" border="0" width="100%" align="center">
+<tbody>
+  <tr>
+		<td class="thead" style="font-weight:normal; border: 0px solid #dbdbdb; border-right: 0px" >
+        {$assist.date}
+    </td>
+		<td class="thead" style="font-weight:normal; border: 0px solid #dbdbdb; border-left: 0px" align="right">
+    Assist Post
+   <strong><span class="textcolor">{$assist.count}</span></strong>
+   </td>
+</tr>
+
+<tr valign="top">
+<td class="alt2" width="200" style="border: 0px solid #dbdbdb; border-top: 0px; border-bottom: 0px" align="center" rowspan="2">
+<span class="bigusername" >
+<span class="textcolor">{$assist.firstname}</span>
+</span>
+
+<div align="center" class="smallfont">
+<div style="width:80px; height:30px" align="center">
+<br/>
+</div>
+<br/>
+<br/>
+
+<table border="0" cellpadding="2" cellspacing="0" width="205">
+<tbody>
+  <tr>
+    <td class="alt1" align="right" width="70" style="border-right: 0px">
+      <span>First Name:</span>
+    </td>
+    <td class="alt1" align="right" width="121" style="border-left: 0px">
+      <span class="textcolor">{$assist.firstname}</span>
+    </td>
+  </tr>
+
+	 <tr>
+    <td class="alt1" align="right" style="border-right: 0px">Last Name:</td>
+    <td class="alt1" align="right" style="border-left: 0px">
+      <span class="textcolor">{$assist.lastname}</span>
+    </td>
+  	</tr>
+
+   <tr>
+    <td class="alt1" align="right" style="border-right: 0px">
+      <span >Gender</span>:</td>
+    <td class="alt1" align="right" style="border-left: 0px">
+      <span class="textcolor">{$assist.gender}</span>
+    </td>
+  	</tr>
+
+
+
+    <tr>
+     <td class="alt1" align="right" style="border-right: 0px">
+       <span>Birth</span>:</td>
+     <td class="alt1" align="right" style="border-left: 0px">
+       <span class="textcolor">{$assist.birth}</span>
+     </td>
+     </tr>
+  	<tr>
+    <td class="alt1" align="right" style="border-right: 0px">
+	  <span >Phone:</span></td>
+    <td class="alt1" align="right" style="border-left: 0px">
+      <span class="textcolor">{$assist.phone}</span>
+    </td>
+  	</tr>
+    <tr>
+    <td class="alt1" align="right" style="border-right: 0px">
+    <span>Amount:</span></td>
+    <td class="alt1" align="right" style="border-left: 0px">
+      <span class="textcolor">${$assist.amount}</span>
+    </td>
+    </tr>
+
+    </tbody>
+  </table>
+
+	</div></td>
+
+	<td class="alt1"  style="border-right: 0px solid #dbdbdb; border-left: 0px; height:100% ; border-bottom:0px">
+
+  		<div class="smallfont">
+      <h2 class="threadtitle"></h2>
+			</div>
+			<hr size="1" style="color:#dbdbdb; background-color:#dbdbdb">
+
+
+		<!-- message -->
+		<div  style="text-align: center">
+
+			{$assist.message}
+		</div>
+		<!-- / message -->
+		</td>
+  </tr>
+  <tr>
+	<td class="alt1"  style="border-right: 0px solid #dbdbdb; border-left: 0px; border-top:0px" valign="bottom">
+		</td>
+  </tr>
+<tr>
+	<td class="alt2" style="border: 0px solid #dbdbdb; border-top: 0px">
+	</td>
+	<td class="alt1" align="right" style="border: 0px solid #dbdbdb; border-left: 0px; border-top: 0px">
+	</td>
+</tr>
+</tbody>
+</table>
+{/if}
+{/foreach}

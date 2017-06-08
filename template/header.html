@@ -1,0 +1,162 @@
+<body>
+
+<div class="stylecontainer"  >
+<div class="shadowleft">
+<div class="shadowright">
+<div class="loginbar">
+<div class="loginbartxt">
+
+
+&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="http://www.aubmc.org/pages/home.aspx">AUBMC</a>
+&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="http://www.hdf.usj.edu.lb/">Hotel Dieu</a>
+&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="http://www.hsc-lb.com/">SCH</a>
+&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="http://www.redcross.org.lb/index.aspx?pageid=907">RedCross</a>
+&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="http://www.bahmanhospital.com/">Bahman</a>
+&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="https://www.cmc.com.lb/">CMC</a>
+&nbsp;&nbsp;&nbsp;|
+
+
+</div>
+</div>
+<div class="headerbar">
+<div class="headerlogo">
+
+
+		<table class="headerbg" border="0" cellpadding="0" style="border-collapse: collapse" width="100%"><tr>
+			<td width="100%" height="100" valign="bottom" align="right">
+			<div class="userinfotable">
+
+
+			<table border="0" cellpadding="0" style="border-collapse: collapse"><tr>
+			<td align="right">
+			<p style="margin-left: 5px; margin-top: 0; margin-bottom: 0"></p></td>
+			<td>
+
+
+<!-- Start User Header-->
+ {if isset($smarty.session.username)}
+		<div class="userinfodata">
+			<strong>Welcome, <a href="">{$smarty.session.username}</a>.</strong>
+		  <p style="margin-top: 3px; margin-bottom: 0px">
+
+              {if isset($smarty.session.type) && $smarty.session.type eq 2}
+			<a href="admin.php?go=admin">Admin CP</a>
+			  {/if}
+			      {if isset($smarty.session.type) && $smarty.session.type eq 2 }
+			<span class="textline">|</span><a href="http://127.0.0.1/phpmyadmin" >phpmyAdmin</a>
+			<span class="textline">|</span>
+				  {/if}
+
+			<a href="logout.php">Log Out</a>
+			</p>
+
+	     <div class="navlinks">
+	      {if isset($smarty.session.type) && $smarty.session.type eq 1 }
+	     <a href="add_assist.php">add assist</a>
+           {/if}
+					 
+	     <span class="textline">|</span>
+	     <a href="" >Quick Links</a>
+			 <span class="textline">|</span> <a href="" >Quick Links</a>
+
+			 <span class="textline">|</span> <a href="" >Quick Links</a>
+			 <span class="textline">|</span><a href="">Quick Links</a>
+			 </div>
+	    </div>
+
+			{else}
+			<div class="userinfodata">
+
+							<div style="padding-bottom: 5px">
+							<p align="right"><a id="loginforum" href="login.php" rel="nofollow" style="cursor: pointer;">Log in </a>
+	            <span class="textline">|</span>
+							<a href="register.php" rel="nofollow">Register</a>
+						  </p>
+						  </div>
+
+
+
+				</div>
+
+
+			{/if}
+			<!-- End User Header-->
+		</td>
+    </tr>
+   </table>
+
+
+		</div>
+                  <table border="0" cellspacing="0"><tr>
+				          <td class="sitemenusp"></td>
+									<td class="sitemenu"><a href="index.php">
+									<font size="4">Home</font></a></td>
+									<td class="sitemenusp"></td>
+									<td class="sitemenu"><a href="donorlist.php">
+									<font size="4">Donor List</font></a></td>
+									<td class="sitemenusp"></td>
+
+									<td class="sitemenu"><a href="assist.php">
+									<font size="4">Assist List</font></a></td>
+
+									<td class="sitemenusp"></td>
+									<td class="sitemenu"><a href="aboutus.php">
+									<font size="4">About us</font></a></td>
+									<td class="sitemenusp"></td>
+
+									<td class="sitemenu"><a href="contact.php">
+									<font size="4">Contact us</font></a></td>
+
+									<td class="sitemenusp"></td>
+									<td class="sitemenusp"></td>
+									<td class="searchtab" nowrap="nowrap" >
+									<div class="googlesrch">
+			<form action="search.php" >
+     <input class="input1" type="text" name="q" size="25" />
+     <input class="srchbott"  type="submit" name="se" value="Search" />
+     </form>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+
+</table>
+
+</div></div>
+<div class="maincontainer">
+
+<div class="boxlineup">
+<div class="boxupleft"><div class="boxupright"></div></div>
+</div>
+<div class="boxlineleft">
+  <div class="boxlineright">
+
+<div align="center">
+<div class="page" style="width:100%; text-align:right">
+<div style="padding:0px 20px 0px 20px" align="right">
+
+
+
+
+
+
+
+
+<br />
+  <!-- navBar Menu -->
+<table align="center" border="0" cellpadding="6" cellspacing="0" class="tborder" width="100%">
+	<tr>
+		<td class="alt1" width="100%">
+			<div class="navbar" style="font-size:10pt"><a href="index.php" accesskey="1">
+				<img class="inlineimg" src="{$template_dir}/images/misc/navbits_start.gif" alt="" border="0" /></a>
+				<strong>Home</strong>
+			</div>
+	</td>
+</tr>
+</table>
+  <!--/ navBar Menu -->
+
+
+<br />

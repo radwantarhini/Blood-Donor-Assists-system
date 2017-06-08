@@ -1,0 +1,103 @@
+<table width="100%" align="center">
+<tbody><tr>
+
+
+<td   style="vertical-align:top;">
+<table class="tborder" cellpadding="6" cellspacing="0" border="0" width="610px" align="left" style="vertical-align:top;">
+<tbody>
+<tr>
+	<td class="tcat">{$box_title}</td>
+</tr>
+<tr>
+	<td class="alt1Active">
+{$message_box}
+	</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+
+
+<td valign="top" colspan="2">
+
+<table class="tborder" cellpadding="6" cellspacing="0" border="0" width="350px" align="right" >
+<tbody><tr>
+	<td class="tcat">Events</td>
+</tr>
+
+{foreach from=$events item=event}
+<tr>
+		<td class="alt1Active">
+
+  		<div class="smallfont">
+      <h2 class="threadtitle">{$event.title}</h2>
+			</div>
+			<hr size="1" style="color:#dbdbdb; background-color:#dbdbdb" />
+		  <!-- message -->
+			{$event.description} - {$event.date|date_format}
+		  <div  style="text-align: center">
+	   	</div>
+		<!-- / message -->
+		</td>
+
+</tr>
+{/foreach}
+
+
+</tbody>
+</table>
+</td>
+
+
+</tr>
+
+<!--- second row-->
+ <tr>
+<td  valign="top">
+<table class="tborder" cellpadding="6" cellspacing="0" border="0" width="610px" align="left" style="vertical-align:top;">
+<tbody>
+<tr>
+	<td class="tcat">Message</td>
+</tr>
+<tr>
+	<td class="alt1Active">
+	
+<p>
+<strong>
+The blood is red gold in time of saving a life.
+</strong>
+</p>
+
+<p>
+<strong>
+Share a little, care a little – Donate Blood.
+</strong>
+</p>
+<p>
+<strong>
+Five minutes of your time + 350 ml. of your blood = One life saved.
+</strong>
+</p>
+<p>
+<strong>
+Blood is meant to circulate. Pass it around.
+</strong>
+</p>
+<p>
+<strong>
+Donation of Blood means a few minutes to you but a lifetime for somebody else.
+</strong>
+</p>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+
+</tr>
+<!---/ second row-->
+</tbody>
+</table>
