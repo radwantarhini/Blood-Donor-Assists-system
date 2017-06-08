@@ -1,0 +1,101 @@
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+<tbody><tr valign="top">
+<td>
+  <!-- admin nav -->
+  <table class="tborder" cellpadding="6" cellspacing="0" border="0">
+  <tbody>
+    <tr>
+      <td class="tcat" nowrap="nowrap" colspan="2">
+    <a href="admin.php?go=admin">Admin Control Panel</a>
+  </td>
+</tr>
+  <tr>
+    <td class="thead" colspan="2">
+      <a href="admin.php?go=admin">Web Setting</a>
+    </td>
+  </tr>
+      <tr>
+        <td class="alt2" nowrap="nowrap">
+          <img border="0" src="template/images/admincp/cog.png" width="16" height="16"></td>
+          <td class="alt2" nowrap="nowrap">
+            <a class="smallfont" href="admin.php?go=admin">Edit Web Setting</a>
+          </td>
+        </tr>
+
+      <tr>
+        <td class="alt2" nowrap="nowrap">
+          <img border="0" src="template/images/admincp/group.png" width="16" height="16"></td>
+          <td class="alt2" nowrap="nowrap">
+            <a class="smallfont" href="admin.php?go=assist">Manage Assists</a>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="alt2" nowrap="nowrap">
+            <img border="0" src="template/images/admincp/user_edit.png" width="16" height="16"></td>
+            <td class="alt2" nowrap="nowrap">
+              <a class="smallfont" href="admin.php?go=users">Manage Users</a>
+            </td>
+          </tr>
+
+  </tbody></table>
+  <!-- / admin nav -->
+
+    </td>
+    <td>&nbsp;&nbsp;</td>
+    <td width="100%">
+
+<!-- main page contents -->
+
+
+<!-- Assist admin-->
+<table class="tborder" cellpadding="6" cellspacing="0" border="0" width="100%" align="center">
+<tbody>
+	<tr>
+	<td class="tcat" align="center" colspan="6">Users Manager</td>
+	</tr>
+</tbody>
+<tbody >
+<tr align="center">
+	  <td class="thead" width="4%">#</td>
+	  <td class="thead" width="15%" align="left">Username</td>
+	  <td class="thead" width="15%">Name</td>
+	  <td class="thead" width="20%">Email</td>
+	  <td class="thead" width="20%">Type</td>
+    <td class="thead" width="5%">Delete</td>
+	</tr>
+{foreach from=$user_donors item=user}
+<tr align="center">
+  <td class="alt2"><div align="center">{$user.count}</div></td>
+  <td class="alt1" align="left" >{$user.username} </td>
+  <td class="alt2">{$user.firstname} {$user.lastname}</td>
+	<td class="alt1">{$user.email}</td>
+	<td class="alt2">
+    {if $user.type eq 0}
+    Donor
+    {else}
+    Assist
+    {/if}
+  </td>
+  <td class="alt2">
+      <form action="admin.php?go={$go}" method="post">
+      <input type="hidden" name="user_id" value="{$user.id}" />
+      <input type="hidden" name="submit_user"  />
+      <button type="submit_assist" style="border: 0; background: transparent"  onclick="return confirm('Are you sure you want to Delete')">
+      <img src="template/images/misc/deactive.png" />
+      <input type="hidden" name="user_delete"  />
+      </button>
+    </form>
+  </td>
+</tr>
+{/foreach}
+</tbody>
+</table>
+<!-- / Assist admin-->
+
+
+<!-- / main page contents -->
+
+</td>
+</tr>
+</tbody></table>

@@ -1,0 +1,120 @@
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+<tbody><tr valign="top">
+<td>
+  <!-- admin nav -->
+  <table class="tborder" cellpadding="6" cellspacing="0" border="0">
+  <tbody>
+    <tr>
+      <td class="tcat" nowrap="nowrap" colspan="2">
+    <a href="admin.php?go=admin">Admin Control Panel</a>
+  </td>
+</tr>
+  <tr>
+    <td class="thead" colspan="2">
+      <a href="admin.php?go=admin">Web Setting</a>
+    </td>
+  </tr>
+      <tr>
+        <td class="alt2" nowrap="nowrap">
+          <img border="0" src="template/images/admincp/cog.png" width="16" height="16"></td>
+          <td class="alt2" nowrap="nowrap">
+            <a class="smallfont" href="admin.php?go=admin">Edit Web Setting</a>
+          </td>
+        </tr>
+
+      <tr>
+        <td class="alt2" nowrap="nowrap">
+          <img border="0" src="template/images/admincp/group.png" width="16" height="16"></td>
+          <td class="alt2" nowrap="nowrap">
+            <a class="smallfont" href="admin.php?go=assist">Manage Assists</a>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="alt2" nowrap="nowrap">
+            <img border="0" src="template/images/admincp/user_edit.png" width="16" height="16"></td>
+            <td class="alt2" nowrap="nowrap">
+              <a class="smallfont" href="admin.php?go=users">Manage Users</a>
+            </td>
+          </tr>
+
+  </tbody></table>
+  <!-- / admin nav -->
+
+    </td>
+    <td>&nbsp;&nbsp;</td>
+    <td width="100%">
+
+<!-- main page contents -->
+
+
+<!-- Setting admin-->
+<table class="tborder" cellpadding="6" cellspacing="0" border="0" width="100%" align="center">
+<tbody><tr>
+	<td class="tcat">
+
+		WebSite &amp; Settings
+	</td>
+</tr>
+<tr>
+	<td class="panelsurround" align="center">
+	<div class="panel">
+		<div align="left">
+
+			<fieldset class="fieldset">
+				<legend >Statistics</legend>
+        <div style="width:50%; margin: 0 auto;">
+        <h1 style="float: left; width: 50%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$assist_stat}</h1>
+        <h1 style="float: right; width: 50%; text-align: right;">{$donor_stat}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+        <h2 style="float: left; width: 50%;">Assist Statistics</h2>
+        <h2 style="float: right; width: 50%; text-align: right;">Donor Statistics</h2>
+       </div>
+			</fieldset>
+  <form action="admin.php?go={$go}" method="POST" >
+      <fieldset class="fieldset">
+      				<legend>Edit Website Title </legend>
+      				<table cellpadding="0" cellspacing="3" border="0">
+      				<tbody>
+                <tr>
+      					<td>
+      						<div>Title:</div>
+      						<div>
+                    <input type="text" class="bginput" name="title" value="{$admin_setting.title}" size="50" maxlength="50">
+                  </div>
+      					</td>
+      				</tr>
+
+            <tr>
+            <td>
+              <div>Contact Email:</div>
+              <div>
+                <input type="email" class="bginput" name="email" value="{$admin_setting.email}" size="50" maxlength="50"/>
+              </div>
+            </td>
+          </tr>
+          <td>
+
+            <div>
+              <input type="submit" class="button" name="submit_admin" />
+              <input type="hidden" class="button" name="submit_admin"  />
+            </div>
+          </td>
+        </tr>
+      				</tbody>
+            </table>
+      			</fieldset>
+          </from>
+
+		</div>
+	</div>
+	</td>
+</tr>
+</tbody></table>
+<!-- /  Setting admin-->
+
+
+<!-- / main page contents -->
+
+</td>
+</tr>
+</tbody></table>

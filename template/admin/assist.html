@@ -1,0 +1,102 @@
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+<tbody><tr valign="top">
+<td>
+  <!-- admin nav -->
+  <table class="tborder" cellpadding="6" cellspacing="0" border="0">
+  <tbody>
+    <tr>
+      <td class="tcat" nowrap="nowrap" colspan="2">
+    <a href="admin.php?go=admin">Admin Control Panel</a>
+  </td>
+</tr>
+  <tr>
+    <td class="thead" colspan="2">
+      <a href="admin.php?go=admin">Web Setting</a>
+    </td>
+  </tr>
+      <tr>
+        <td class="alt2" nowrap="nowrap">
+          <img border="0" src="template/images/admincp/cog.png" width="16" height="16"></td>
+          <td class="alt2" nowrap="nowrap">
+            <a class="smallfont" href="admin.php?go=admin">Edit Web Setting</a>
+          </td>
+        </tr>
+
+      <tr>
+        <td class="alt2" nowrap="nowrap">
+          <img border="0" src="template/images/admincp/group.png" width="16" height="16"></td>
+          <td class="alt2" nowrap="nowrap">
+            <a class="smallfont" href="admin.php?go=assist">Manage Assists</a>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="alt2" nowrap="nowrap">
+            <img border="0" src="template/images/admincp/user_edit.png" width="16" height="16"></td>
+            <td class="alt2" nowrap="nowrap">
+              <a class="smallfont" href="admin.php?go=users">Manage Users</a>
+            </td>
+          </tr>
+
+  </tbody></table>
+  <!-- / admin nav -->
+
+    </td>
+    <td>&nbsp;&nbsp;</td>
+    <td width="100%">
+
+<!-- main page contents -->
+
+
+<!-- Assist admin-->
+<table class="tborder" cellpadding="6" cellspacing="0" border="0" width="100%" align="center">
+<tbody>
+	<tr>
+	<td class="tcat" align="center" colspan="6">Assist Manager</td>
+	</tr>
+</tbody>
+<tbody >
+<tr align="center">
+	  <td class="thead">#</td>
+	  <td class="thead" width="20%" align="left">Name</td>
+	  <td class="thead" width="15%">Amount</td>
+	  <td class="thead" width="50%">Message</td>
+	  <td class="thead" width="30%">Date</td>
+    <td class="thead" width="30%">Active</td>
+	</tr>
+{foreach from=$assists item=assist}
+<tr align="center">
+  <td class="alt2"><div align="center">{$assist.count}</div></td>
+  <td class="alt1" align="left" >{$assist.firstname} {$assist.lastname}</td>
+  <td class="alt2">{$assist.amount} $</td>
+	<td class="alt1">{$assist.message|substr:0:20}</td>
+	<td class="alt2">{$assist.date|date_format:'%Y-%m-%d'}</td>
+  <td class="alt2">
+      <form action="admin.php?go={$go}" method="post">
+      <input type="hidden" name="assist_id" value="{$assist.id}" />
+      <input type="hidden" name="submit_assist"  />
+    {if $assist.active eq 0 }
+      <button type="submit_assist" style="border: 0; background: transparent">
+      <input type="hidden" name="assist_active"  />
+      <img src="template/images/misc/active.png" />
+      </button>
+    {else}
+      <button type="submit_assist" style="border: 0; background: transparent">
+      <img src="template/images/misc/deactive.png" />
+      <input type="hidden" name="assist_deactive"  />
+      </button>
+    {/if}
+    </form>
+  </td>
+</tr>
+{/foreach}
+</tbody>
+</table>
+<!-- / Assist admin-->
+
+
+<!-- / main page contents -->
+
+</td>
+</tr>
+</tbody></table>
